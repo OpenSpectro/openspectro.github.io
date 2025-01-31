@@ -1,42 +1,38 @@
-import os
 from flask import Flask, render_template, request
+import os
 
 app = Flask(__name__)
-
-# Base directory for HTML files
 BASE_DIR = 'Absorbance-Graph'
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    # Get subfolders in the base directory
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+@app.route('/database', methods=['GET', 'POST'])
+def database():
+    # Folder selection logic
     subfolders = [f for f in os.listdir(BASE_DIR) if os.path.isdir(os.path.join(BASE_DIR, f))]
-
-    # Determine selected folder
-    selected_folder = request.form.get('folder') if request.method == 'POST' else 'Glucose'
-    if selected_folder not in subfolders:
-        # Fallback if 'Glucose' isn't valid or doesn't exist
-        selected_folder = subfolders[0] if subfolders else ''
-
-    # Get HTML files in the selected folder
+    selected_folder = request.form.get('folder', 'Blood_Glucose_Control_Solution-2025-01-21-11-36-56')
+    
+    # Threshold handling
     folder_path = os.path.join(BASE_DIR, selected_folder)
     html_files = sorted(
         [f for f in os.listdir(folder_path) if f.endswith('.html')],
         key=lambda x: int(x.split('.')[0])
     )
-
-    # Determine file index
-    file_index = int(request.form.get('file_index', 1))
-    # Ensure the file exists in the folder; else pick the first one
-    selected_file = f"{file_index}.html" if f"{file_index}.html" in html_files else html_files[0]
-
-    return render_template(
-        'index.html',
+    thresholds = [int(f.split('.')[0]) for f in html_files]
+    
+    # Get selected threshold
+    selected_threshold = int(request.form.get('threshold', thresholds[0])) if thresholds else 0
+    current_index = thresholds.index(selected_threshold) if thresholds else 0
+    
+    return render_template('database.html',
         subfolders=subfolders,
         selected_folder=selected_folder,
-        html_files=html_files,
-        selected_file=selected_file,
-        file_index=file_index,
-        threshold=file_index  # Pass threshold as label
+        thresholds=thresholds,
+        current_index=current_index,
+        selected_threshold=selected_threshold,
+        selected_file=f"{selected_threshold}.html"
     )
 
 @app.route('/html/<folder>/<file>', methods=['GET'])

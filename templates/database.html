@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Database - OpenSpectro{% endblock %}
+{% block extra_css %}
+<style>
+  /* Slider-specific styles */
+  form { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+  .slider-container { flex-grow: 1; margin: 0.5rem 0; }
+  input[type="range"] { width: 100%; height: 6px; }
+  iframe { width: 100%; height: calc(100vh - 220px); border: 1px solid #ddd; }
+</style>
+{% endblock %}
+{% block header_content %}
+<form method="POST">
+  <div>
+    <label for="folder">Select biomarker:</label>
+    <select id="folder" name="folder" onchange="this.form.submit()">
+      {% for folder in subfolders %}
+        <option value="{{ folder }}" {% if folder == selected_folder %}selected{% endif %}>{{ folder }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="slider-container">
+    <label for="threshold">Threshold:</label>
+    <input type="range" id="index_slider" 
+           min="0" max="{{ thresholds|length - 1 }}" 
+           value="{{ current_index }}"
+           oninput="updateThreshold(this.value)">
+    <span class="threshold-label">{{ selected_threshold }}</span>
+    <input type="hidden" id="threshold" name="threshold" value="{{ selected_threshold }}">
+  </div>
+</form>
+{% endblock %}
+{% block main_content %}
+<iframe src="/html/{{ selected_folder }}/{{ selected_file }}"></iframe>
+{% endblock %}
+{% block extra_js %}
+<script>
+  const thresholds = {{ thresholds|tojson }};
+  function updateThreshold(index) {
+    const threshold = thresholds[parseInt(index)];
+    document.getElementById('threshold').value = threshold;
+    document.querySelector('.threshold-label').textContent = threshold;
+    document.forms[0].submit();
+  }
+</script>
+{% endblock %}

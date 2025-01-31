@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Home - OpenSpectro{% endblock %}
+{% block main_content %}
+<section style="max-width: 800px; margin: 0 auto;">
+  <h2 style="margin-bottom: 1rem;">3D Spectroscopic Profiling for Biomedical Analysis</h2>
+  <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <h3 style="color: #7f7fd5; margin-bottom: 0.5rem;">Abstract</h3>
+    <p style="margin-bottom: 1.5rem;">Our paper presents a novel method for... [Abstract content here]</p>
+    
+    <h3 style="color: #7f7fd5; margin-bottom: 0.5rem;">How to Use</h3>
+    <p style="margin-bottom: 1.5rem;">1. Navigate to the spectroscopic database<br>
+    2. Select your biomarker<br>
+    3. Use the slider to explore thresholds</p>
+    
+    <h3 style="color: #7f7fd5; margin-bottom: 0.5rem;">Contributions</h3>
+    <ul style="margin-bottom: 2rem;">
+      <li>Open-source platform</li>
+      <li>3D visualization capabilities</li>
+      <li>Interactive threshold analysis</li>
+    </ul>
+    
+    <a href="/database" style="display: inline-block; padding: 0.8rem 1.5rem; background: #7f7fd5; color: white; text-decoration: none; border-radius: 4px; transition: background 0.2s;">
+      Access Spectroscopic Database →
+    </a>
+  </div>
+</section>
+{% endblock %}
