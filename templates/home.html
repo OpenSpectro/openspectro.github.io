@@ -3,7 +3,10 @@
 {% block main_content %}
 <section class="hero-section">
   <div class="container">
-    <img src="/static/logo.svg" alt="OpenSpectro Logo" class="logo">
+    <div class="logo-container">
+      <img src="/static/logo.png" alt="OpenSpectro Logo" class="logo">
+      <span class="logo-text">OpenSpectro</span>
+    </div>
     <h1>3D Spectroscopic Profiling for Biomedical Analysis</h1>
   </div>
 </section>
@@ -12,23 +15,23 @@
   <div class="container">
     <div class="paper-card">
       <div class="abstract-section">
-        <h2><i class="fas fa-file-alt"></i> Abstract</h2>
-        <p>Our paper presents OpenSpectro, a novel open-source platform for 3D spectroscopic analysis of physiological biomarkers. We introduce a method for non-invasive health monitoring through advanced optical spectroscopy and multi-wavelength photoplethysmography, enabling real-time biomarker detection with 92% accuracy in clinical trials...</p>
+        <h2><i class="fas fa-file-alt"></i>Abstract</h2>
+        <p>Spectroscopic analysis plays a crucial role in identifying absorbance-based molecular signatures—distinct optical patterns observed across various wavelengths. Recognizing these signatures provides valuable insights for designing wearable health-monitoring devices. Specifically, constructing three-dimensional (3D) spectroscopic graphs of molecular spectra enables the optimization of multi-photoplethysmography (PPG) sensors, enhancing their accuracy and performance. Historically, the limitations of computational power and the prevalence of single-wavelength approaches have hindered comprehensive analysis of 3D molecular spectral data, slowing progress in multiwavelength sensor development. However, multi-PPG readings on wearable devices capture more detailed information and effectively track biomarkers, underscoring the need for 3D spectroscopic analysis in studying substances. To bridge this gap, we introduce OpenSpectro, an open-source 3D spectroscopic profiling platform designed for visualizing and sharing molecular spectrum data, particularly those relevant to physiological biomarkers. Its interactive visualization tools empower researchers to compare, explore, and collaborate on spectral patterns, fostering innovations in wearable technology and enabling more precise physiological monitoring. </p>
       </div>
 
       <div class="features-grid">
         <div class="feature-card">
-          <i class="fas fa-cube"></i>
+          <!-- <i class="fas fa-cube"></i> -->
           <h3>3D Visualization</h3>
           <p>Interactive 3D molecular signature analysis with real-time manipulation</p>
         </div>
         <div class="feature-card">
-          <i class="fas fa-sliders-h"></i>
+          <!-- <i class="fas fa-sliders-h"></i> -->
           <h3>Threshold Analysis</h3>
           <p>Dynamic parameter adjustment for optimal biomarker detection</p>
         </div>
         <div class="feature-card">
-          <i class="fas fa-share-alt"></i>
+          <!-- <i class="fas fa-share-alt"></i> -->
           <h3>Collaborative Platform</h3>
           <p>Share and compare spectroscopic profiles with researchers worldwide</p>
         </div>
@@ -45,7 +48,7 @@
           <div class="step">
             <div class="step-number">2</div>
             <h4>Biomarker Selection</h4>
-            <p>Choose from 50+ physiological markers with detailed spectral profiles</p>
+            <p>Choose from 15+ physiological markers with detailed spectral profiles</p>
           </div>
           <div class="step">
             <div class="step-number">3</div>
@@ -60,7 +63,7 @@
         <div class="citation-box">
           <p>Please cite our work as:</p>
           <code>
-            Author, A. et al. (2024). "OpenSpectro: 3D Spectroscopic Profiling for Biomedical Analysis". 
+            Haoran Zhang, Elizabeth Courtney, Kyle Quinn, Amanda Watson (2025). "OpenSpectro: 3D Spectroscopic Profiling for Biomedical Analysis". 
             Journal of Advanced Health Monitoring. DOI: 10.xxxx/xxxxxx
           </code>
         </div>
@@ -75,4 +78,3 @@
   </div>
 </section>
 {% endblock %}
-
