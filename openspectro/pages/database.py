@@ -12,6 +12,6 @@ def page():
     # Load the JSON data
     with open(database_json_path, 'r') as file:
         biomarkers = json.load(file)
-    
+
     # Pass the biomarkers data to the template
     return render_template("database/database.html", CSSLink="/static/css/database/style.css", biomarkers=biomarkers, iconLink = "../static/figure/database/database.png")

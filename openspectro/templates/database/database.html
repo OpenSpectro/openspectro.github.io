@@ -4,7 +4,13 @@
 {% block style %}  <link href="{{ CSSLink }}" rel="stylesheet"> {% endblock %}
 
 <section class="hero-section">
-  <h1>Biomarker Database</h1>
+  <div class="container">
+    <div class="logo-container">
+      <img src={{ iconLink }} alt="Database Icon" class="logo">
+      <span class="logo-text">Biomarker Database</span>
+    </div>
+    <!-- <h1>Biomarker Database</h1> -->
+  </div>
 </section>
 
 <section class="content-section">
@@ -52,6 +58,12 @@
         {% endfor %}
     </tbody>
     </table>
+  </div>
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="{{ url_for('home.page') }}" class="acc-button">
+      <i class="fas fa-arrow-left"></i> Back to Homepage
+    </a>
   </div>
 </section>
 {% endblock %}

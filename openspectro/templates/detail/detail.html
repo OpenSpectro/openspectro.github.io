@@ -4,62 +4,68 @@
 {% block style %}  <link href="{{ CSSLink }}" rel="stylesheet"> {% endblock %}
 
 <section class="hero-section">
-    <h1>Biomarker Details</h1>
-  </div>
+    <h1>{{ biomarker.BiomarkerName }} Details</h1>
 </section>
 
 <section class="content-section">
   <div class="container">
     <div class="paper-card">
-      <h2><i class="fas fa-info-circle"></i> {{ biomarker.BiomarkerName }}</h2>
-      
-      <!-- Detailed Information -->
-      <div class="biomarker-details">
-        <div class="detail-row">
-          <span class="detail-label">ID:</span>
-          <span class="detail-value">{{ biomarker.ID }}</span>
-        </div>
-        <div class="detail-row">
-          <span class="detail-label">Chemical Formula:</span>
-          <span class="detail-value">{{ biomarker.ChemicalFormula }}</span>
-        </div>
-        <div class="detail-row">
-          <span class="detail-label">Concentration:</span>
-          <span class="detail-value">{{ biomarker.Concentration }} {{ biomarker.ConcentrationLabel }}</span>
-        </div>
-        <div class="detail-row">
-          <span class="detail-label">Tags:</span>
-          <span class="detail-value">
+      <table class="biomarker-table">
+        <tr>
+          <th>ID</th>
+          <td>{{ biomarker.ID }}</td>
+        </tr>
+        <tr>
+          <th>Chemical Formula</th>
+          <td>{{ biomarker.ChemicalFormula }}</td>
+        </tr>
+        <tr>
+          <th>Concentration</th>
+          <td>{{ biomarker.Concentration }} {{ biomarker.ConcentrationLabel }}</td>
+        </tr>
+        <tr>
+          <th>Tags</th>
+          <td>
             {% for tag in biomarker.Tags %}
               <span class="tag">{{ tag }}</span>
             {% endfor %}
-          </span>
-        </div>
-        <div class="detail-row">
-          <span class="detail-label">Solvent:</span>
-          <span class="detail-value">{{ biomarker.Solvent }}</span>
-        </div>
-        <div class="detail-row">
-          <span class="detail-label">Source:</span>
-          <span class="detail-value">{{ biomarker.Source }}</span>
-        </div>
-        <div class="detail-row">
-          <span class="detail-label">Bio Function (Short):</span>
-          <span class="detail-value">{{ biomarker.BioFunctionShort }}</span>
-        </div>
-        <div class="detail-row">
-          <span class="detail-label">Bio Function (Long):</span>
-          <span class="detail-value">{{ biomarker.BioFunctionLong }}</span>
-        </div>
-        <div class="detail-row">
-          <span class="detail-label">Wiki Link:</span>
-          <span class="detail-value">
+          </td>
+        </tr>
+        <tr>
+          <th>Solvent</th>
+          <td>{{ biomarker.Solvent }}</td>
+        </tr>
+        <tr>
+          <th>Source</th>
+          <td>{{ biomarker.Source }}</td>
+        </tr>
+        <tr>
+          <th>Bio Function (Short)</th>
+          <td>{{ biomarker.BioFunctionShort }}</td>
+        </tr>
+        <tr>
+          <th colspan="2">Bio Function (Long)</th>
+        </tr>
+        <tr>
+          <td colspan="2">{{ biomarker.BioFunctionLong }}</td>
+        </tr>
+        <tr>
+          <th>Wiki Link</th>
+          <td>
             <a href="{{ biomarker.WikiLink }}" target="_blank" class="wiki-link">
               <i class="fas fa-external-link-alt"></i> {{ biomarker.WikiLink }}
             </a>
-          </span>
-        </div>
-      </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src={{ moleculeLink }} alt="Molecule Image" class="molecule-image">
+          </td>
+          <td>
+            <img src={{ cuvetteLink }} alt="Molecule Image" class="molecule-image">
+          </td>
+        </tr>
+      </table>
 
       <!-- Back Button -->
       <div class="back-button">
