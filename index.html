@@ -145,6 +145,15 @@
         margin-right: 0.5rem;
     }
 
+    pre {
+      margin: 0;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 5px;
+      font-family: monospace;
+      white-space: pre-wrap; /* Ensures text wraps if it exceeds the container width */
+    }
+
   </style>
 </head>
 <body>
@@ -155,7 +164,7 @@
     <section class="hero-section">
         <div class="container">
           <div class="logo-container">
-            <img src="../static/figure/home/logo.png" alt="OpenSpectro Logo" class="logo">
+            <img src="openspectro/static/figure/home/logo.png" alt="OpenSpectro Logo" class="logo">
             <span class="logo-text">OpenSpectro</span>
           </div>
           <h1>Spectroscopic Profiling for Biomedical Analysis</h1>
@@ -202,10 +211,12 @@
               <div class="github-box">
                 <p>Check out our GitHub repository for usage instructions:</p>
                 <code id="github-code">
-                  git clone https://github.com/yourusername/openspectro.git
-                  cd openspectro
-                  pip install -r requirements.txt
-                  python main.py
+                  <pre>
+git clone https://github.com/yourusername/openspectro.git
+cd openspectro
+pip install -r requirements.txt
+python main.py
+                  </pre>
                 </code>
                 <button class="copy-button" onclick="copyToClipboard('github-code')">Copy</button>
               </div>
