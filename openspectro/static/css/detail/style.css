@@ -1,0 +1,49 @@
+/* detail/style.css */
+.biomarker-details {
+  margin-top: 2rem;
+}
+
+.detail-row {
+  margin-bottom: 1rem;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #7f7fd5;
+  margin-right: 0.5rem;
+}
+
+.detail-value {
+  color: #333;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 2px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.wiki-link {
+  color: #7f7fd5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.wiki-link:hover {
+  text-decoration: underline;
+}
+
+.back-button {
+  margin-top: 2rem;
+}
+
+  .hero-section {
+    background: linear-gradient(135deg, #7f7fd5 0%, #86a8e7 100%);
+    padding: 2rem 0;
+    text-align: center;
+    color: white;
+  }

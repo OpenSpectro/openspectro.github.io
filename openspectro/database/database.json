@@ -1,0 +1,34 @@
+[
+    {
+        "ID": 0,
+        "BiomarkerName": "Bilirubin",
+        "ChemicalFormula": "C33H36N4O6",
+        "Concentration": 1.67,
+        "ConcentrationLabel": "mg/mL",
+        "Tags": [
+            "Clear",
+            "Expensive"
+        ],
+        "Solvent": "Alcohol",
+        "Source": "Human",
+        "BioFunctionShort": "Byproduct of red blood cell breakdown",
+        "BioFunctionLong": "Bilirubin (BR) (from the Latin for 'red bile' is a red-orange compound that occurs in the normal catabolic pathway that breaks down heme in vertebrates. This catabolism is a necessary process in the body's clearance of waste products that arise from the destruction of aged or abnormal red blood cells. In the first step of bilirubin synthesis, the heme molecule is stripped from the hemoglobin molecule. Heme then passes through various processes of porphyrin catabolism, which varies according to the region of the body in which the breakdown occurs. For example, the molecules excreted in the urine differ from those in the feces. The production of biliverdin from heme is the first major step in the catabolic pathway, after which the enzyme biliverdin reductase performs the second step, producing bilirubin from biliverdin.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Bilirubin"
+    },
+    {
+        "ID": 1,
+        "BiomarkerName": "C-Reative Protein (Human)",
+        "ChemicalFormula": "C38H57N9O8",
+        "Concentration": 100.0,
+        "ConcentrationLabel": "uL/mL", 
+        "Tags": [
+            "Clear",
+            "Expensive"
+        ],
+        "Solvent": "PBS",
+        "Source": "",
+        "BioFunctionShort": "",
+        "BioFunctionLong": "",
+        "WikiLink": "https://en.wikipedia.org/wiki/XXXX"
+    }
+]

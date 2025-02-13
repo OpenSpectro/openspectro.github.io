@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Detail - OpenSpectro{% endblock %}
+{% block main_content %}
+{% block style %}  <link href="{{ CSSLink }}" rel="stylesheet"> {% endblock %}
+
+<section class="hero-section">
+    <h1>Biomarker Details</h1>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="paper-card">
+      <h2><i class="fas fa-info-circle"></i> {{ biomarker.BiomarkerName }}</h2>
+      
+      <!-- Detailed Information -->
+      <div class="biomarker-details">
+        <div class="detail-row">
+          <span class="detail-label">ID:</span>
+          <span class="detail-value">{{ biomarker.ID }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Chemical Formula:</span>
+          <span class="detail-value">{{ biomarker.ChemicalFormula }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Concentration:</span>
+          <span class="detail-value">{{ biomarker.Concentration }} {{ biomarker.ConcentrationLabel }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Tags:</span>
+          <span class="detail-value">
+            {% for tag in biomarker.Tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Solvent:</span>
+          <span class="detail-value">{{ biomarker.Solvent }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Source:</span>
+          <span class="detail-value">{{ biomarker.Source }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Bio Function (Short):</span>
+          <span class="detail-value">{{ biomarker.BioFunctionShort }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Bio Function (Long):</span>
+          <span class="detail-value">{{ biomarker.BioFunctionLong }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Wiki Link:</span>
+          <span class="detail-value">
+            <a href="{{ biomarker.WikiLink }}" target="_blank" class="wiki-link">
+              <i class="fas fa-external-link-alt"></i> {{ biomarker.WikiLink }}
+            </a>
+          </span>
+        </div>
+      </div>
+
+      <!-- Back Button -->
+      <div class="back-button">
+        <a href="{{ url_for('database.page') }}" class="acc-button">
+          <i class="fas fa-arrow-left"></i> Back to Database
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

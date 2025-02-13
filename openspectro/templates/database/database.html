@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Database - OpenSpectro{% endblock %}
+{% block main_content %}
+{% block style %}  <link href="{{ CSSLink }}" rel="stylesheet"> {% endblock %}
+
+<section class="hero-section">
+  <h1>Biomarker Database</h1>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <!-- Biomarker Table -->
+    <table class="biomarker-table">
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th>Biomarker Name</th>
+        <th>Chemical Formula</th>
+        <th>Concentration</th>
+        <th>Tags</th>
+        <th>Solvent</th>
+        <th>Source</th>
+        <th>Bio Function (Short)</th>
+        <th>Wiki Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for biomarker in biomarkers %}
+        <tr>
+        <td>{{ biomarker.ID }}</td>
+        <td>
+          <a href="{{ url_for('detail.page', id=biomarker.ID) }}" class="biomarker-link">
+            {{ biomarker.BiomarkerName }}
+          </a>
+        </td>
+        <td>{{ biomarker.ChemicalFormula }}</td>
+        <td>{{ biomarker.Concentration }} {{ biomarker.ConcentrationLabel }}</td>
+        <td>
+            {% for tag in biomarker.Tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </td>
+        <td>{{ biomarker.Solvent }}</td>
+        <td>{{ biomarker.Source }}</td>
+        <td>{{ biomarker.BioFunctionShort }}</td>
+        <td>
+            <a href="{{ biomarker.WikiLink }}" target="_blank" class="wiki-link">
+            <i class="fas fa-external-link-alt"></i> Wiki
+            </a>
+        </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}
