@@ -1,52 +1,118 @@
+/* Common styles from original index.html */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Poppins', sans-serif; background: #fdfdfd; }
+header { padding: 1rem; background: linear-gradient(135deg, #7f7fd5, #86a8e7, #91eae4); color: #fff; }
+main { padding: 1rem 2rem; background-color: #fafafa; }
+h1 { font-size: 1.8rem; font-weight: 700; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
 
-
-.paper-card {
-background: white;
-border-radius: 15px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-padding: 2.5rem;
-margin-top: -50px;
-position: relative;
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
+.logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: -3px;
+}
+
+.logo-text {
+    font-family: 'ChalkBoard'; /* Playful, childlike font */
+    font-size: 4.5rem; /* Adjust as needed */
+    font-weight: 700; /* Thicker weight */
+    margin-left: 20px; /* Adjust as needed */
+    text-transform: uppercase; /* Optional: Make it uppercase for more impact */
+    letter-spacing: 2px; /* Add spacing between letters for a unique look */
+
+    /* Visible spectrum gradient */
+    background: linear-gradient(
+    to right,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+    );
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent */
+    background-clip: text;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #7f7fd5 0%, #86a8e7 100%);
+    padding: 4rem 0;
+    text-align: center;
+    color: white;
+}
+
+.paper-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+    margin-top: -50px;
+    position: relative;
+    }
+
 .features-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 2rem;
-margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
 }
 
 .feature-card {
-text-align: center;
-padding: 1.5rem;
-border-radius: 10px;
-background: #f8f9fa;
-transition: transform 0.3s ease;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: #f8f9fa;
+    transition: transform 0.3s ease;
 }
 
 .feature-card:hover {
-transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .usage-steps {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 2rem;
-margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
 .step {
-text-align: center;
-padding: 1.5rem;
-border: 2px solid #7f7fd5;
-border-radius: 10px;
+    text-align: center;
+    padding: 1.5rem;
+    border: 2px solid #7f7fd5;
+    border-radius: 10px;
 }
 
-.citation-box {
-background: #f8f9fa;
-padding: 1.5rem;
-border-left: 4px solid #7f7fd5;
-margin: 2rem 0;
+.citation-box, .github-box {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-left: 4px solid #7f7fd5;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.copy-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: #7f7fd5;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    background: #86a8e7;
 }
 
 .acc-button {
@@ -66,5 +132,14 @@ margin: 2rem 0;
 }
 
 .fas {
-margin-right: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+pre {
+  margin: 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 5px;
+  font-family: monospace;
+  white-space: pre-wrap; /* Ensures text wraps if it exceeds the container width */
 }

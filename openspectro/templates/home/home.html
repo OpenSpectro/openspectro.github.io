@@ -1,78 +1,112 @@
 {% extends "base.html" %}
 {% block title %}Home - OpenSpectro{% endblock %}
-{% block main_content %}
 {% block style %}  <link href="{{ CSSLink }}" rel="stylesheet"> {% endblock %}
-<section class="hero-section">
-  <div class="container">
-    <div class="logo-container">
-      <img src="../static/figure/home/logo.png" alt="OpenSpectro Logo" class="logo">
-      <span class="logo-text">OpenSpectro</span>
-    </div>
-    <h1>Spectroscopic Profiling for Biomedical Analysis</h1>
-  </div>
-</section>
 
-<section class="content-section">
-  <div class="container">
-    <div class="paper-card">
-      <div class="abstract-section">
-        <h2><i class="fas fa-file-alt"></i>Abstract</h2>
-        <p>Spectroscopic analysis is essential for identifying optical-based molecular signatures—distinct patterns observed across various wavelengths. Understanding these signatures provides critical insights for designing wearable health-monitoring devices. In particular, constructing three-dimensional (3D) spectroscopic graphs of molecular spectra enables the optimization of multi-wavelength photoplethysmography (PPG) sensors, improving their accuracy and performance. However, no prior work has systematically mapped spectroscopic signatures to optimize wavelength combinations, slowing advancements in multi-wavelength PPG sensor deployment. To address this gap, we introduce OpenSpectro, an open-source spectroscopic profiling platform for visualizing and sharing molecular spectral data, particularly human physiological biomarkers. OpenSpectro features a preliminary spectroscopic database containing 17 biomarkers and a spectral attention optimization model that identifies customized wavelength attention weights for each biomarker. </p>
-      </div>
+{% block header_title %}<h1>OpenSpectro: An Open-Source 3D Spectroscopic Profiling Platform</h1>{% endblock %}
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>3D Visualization</h3>
-          <p>Interactive 3D molecular signature analysis with real-time manipulation</p>
-        </div>
-        <div class="feature-card">
-          <h3>Wavelength Optimization</h3>
-          <p>Multi-PPG wavelength optimization given target biomarker signature</p>
-        </div>
-        <div class="feature-card">
-          <h3>Collaborative Platform</h3>
-          <p>Share and compare spectroscopic profiles with researchers worldwide</p>
-        </div>
-      </div>
+{% block main_content %}
 
-      <div class="usage-section">
-        <h2><i class="fas fa-graduation-cap"></i> Platform Guide</h2>
-        <div class="usage-steps">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h4>Database Navigation</h4>
-            <p>Access our comprehensive biomarker library through intuitive search filters</p>
+    
+    <section class="hero-section">
+        <div class="container">
+          <div class="logo-container">
+            <img src="../static/figure/home/logo.png" alt="OpenSpectro Logo" class="logo">
+            <span class="logo-text">OpenSpectro</span>
           </div>
-          <div class="step">
-            <div class="step-number">2</div>
-            <h4>Biomarker Selection</h4>
-            <p>Choose from 15+ physiological markers with detailed spectral profiles</p>
-          </div>
-          <div class="step">
-            <div class="step-number">3</div>
-            <h4>Interactive Analysis</h4>
-            <p>Utilize our 3D visualization tools and threshold sliders for optimal configuration</p>
+          <h1>Spectroscopic Profiling for Biomedical Analysis</h1>
+        </div>
+      </section>
+      
+      <section class="content-section">
+        <div class="container">
+          <div class="paper-card">
+            <div class="abstract-section">
+              <h2><i class="fas fa-file-alt"></i>Abstract</h2>
+              <p>Spectroscopic analysis is essential for identifying optical-based molecular signatures—distinct patterns observed across various wavelengths. Understanding these signatures provides critical insights for designing wearable health-monitoring devices. In particular, constructing three-dimensional (3D) spectroscopic graphs of molecular spectra enables the optimization of multi-wavelength photoplethysmography (PPG) sensors, improving their accuracy and performance. However, no prior work has systematically mapped spectroscopic signatures to optimize wavelength combinations, slowing advancements in multi-wavelength PPG sensor deployment. To address this gap, we introduce OpenSpectro, an open-source spectroscopic profiling platform for visualizing and sharing molecular spectral data, particularly human physiological biomarkers. OpenSpectro features a preliminary spectroscopic database containing 17 biomarkers and a spectral attention optimization model that identifies customized wavelength attention weights for each biomarker. </p>
+            </div>
+      
+            <div class="features-grid">
+              <div class="feature-card">
+                <h3>3D Visualization</h3>
+                <p>Interactive 3D molecular signature analysis with real-time manipulation</p>
+              </div>
+              <div class="feature-card">
+                <h3>Wavelength Optimization</h3>
+                <p>Multi-PPG wavelength optimization given target biomarker signature</p>
+              </div>
+              <div class="feature-card">
+                <h3>Collaborative Platform</h3>
+                <p>Share and compare spectroscopic profiles with researchers worldwide</p>
+              </div>
+            </div>
+      
+            <!-- <div class="citation-section">
+              <h2><i class="fas fa-quote-right"></i> Citation</h2>
+              <div class="citation-box">
+                <p>Please cite our work as:</p>
+                <code id="citation-text">
+                  Haoran Zhang, Elizabeth Courtney, Kyle Quinn, Amanda Watson (2025). "OpenSpectro: 3D Spectroscopic Profiling for Biomedical Analysis". 
+                  IEEE Engineering in Medicine and Biology Society. DOI: 10.xxxx/xxxxxx
+                </code>
+                <button class="copy-button" onclick="copyToClipboard('citation-text')">Copy</button>
+              </div>
+            </div> -->
+
+            <div class="github-section">
+              <h2><i class="fab fa-github"></i> GitHub</h2>
+              <div class="github-box">
+                <p>Check out our GitHub repository for usage instructions:</p>
+                <code id="github-code">
+                  <pre>
+git clone https://github.com/OpenSpectro/openspectro.github.io.git
+cd openspectro
+pip install -r requirements.txt
+python main.py
+                  </pre>
+                </code>
+                <button class="copy-button" onclick="copyToClipboard('github-code')">Copy</button>
+              </div>
+            </div>
+      
+            <div class="usage-section">
+              <h2><i class="fas fa-graduation-cap"></i> Platform Guide</h2>
+              <div class="usage-steps">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <h4>Database Navigation</h4>
+                  <p>Access our comprehensive biomarker library through intuitive search filters</p>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <h4>Biomarker Selection</h4>
+                  <p>Choose from 15+ physiological markers with detailed spectral profiles</p>
+                </div>
+                <div class="step">
+                  <div class="step-number">3</div>
+                  <h4>Interactive Analysis</h4>
+                  <p>Utilize our 3D visualization tools and threshold sliders for optimal configuration</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="cta-section">
+              <a href="{{ url_for('database.page') }}" class="acc-button">
+                Explore Database <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="citation-section">
-        <h2><i class="fas fa-quote-right"></i> Citation</h2>
-        <div class="citation-box">
-          <p>Please cite our work as:</p>
-          <code>
-            Haoran Zhang, Elizabeth Courtney, Kyle Quinn, Amanda Watson (2025). "OpenSpectro: 3D Spectroscopic Profiling for Biomedical Analysis". 
-            IEEE Engineering in Medicine and Biology Society. DOI: 10.xxxx/xxxxxx
-          </code>
-        </div>
-      </div>
-
-      <div class="cta-section">
-        <a href="{{ url_for('database.page') }}" class="acc-button">
-          Explore Database <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+  <script>
+    function copyToClipboard(elementId) {
+      const element = document.getElementById(elementId);
+      const text = element.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    }
+  </script>
 {% endblock %}
