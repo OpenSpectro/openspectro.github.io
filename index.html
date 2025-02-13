@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - OpenSpectro</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Common styles from original index.html */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; background: #fdfdfd; }
+    header { padding: 1rem; background: linear-gradient(135deg, #7f7fd5, #86a8e7, #91eae4); color: #fff; }
+    main { padding: 1rem 2rem; background-color: #fafafa; }
+    h1 { font-size: 1.8rem; font-weight: 700; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        width: 80px;
+        height: auto;
+        margin-bottom: -3px;
+    }
+
+    .logo-text {
+        font-family: 'ChalkBoard'; /* Playful, childlike font */
+        font-size: 4.5rem; /* Adjust as needed */
+        font-weight: 700; /* Thicker weight */
+        margin-left: 20px; /* Adjust as needed */
+        text-transform: uppercase; /* Optional: Make it uppercase for more impact */
+        letter-spacing: 2px; /* Add spacing between letters for a unique look */
+
+        /* Visible spectrum gradient */
+        background: linear-gradient(
+        to right,
+        violet,
+        indigo,
+        blue,
+        green,
+        yellow,
+        orange,
+        red
+        );
+        -webkit-background-clip: text; /* Clip the background to the text */
+        -webkit-text-fill-color: transparent; /* Make the text transparent */
+        background-clip: text;
+    }
+
+    .hero-section {
+        background: linear-gradient(135deg, #7f7fd5 0%, #86a8e7 100%);
+        padding: 4rem 0;
+        text-align: center;
+        color: white;
+    }
+
+    .paper-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        padding: 2.5rem;
+        margin-top: -50px;
+        position: relative;
+        }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 3rem 0;
+    }
+
+    .feature-card {
+        text-align: center;
+        padding: 1.5rem;
+        border-radius: 10px;
+        background: #f8f9fa;
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .usage-steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+
+    .step {
+        text-align: center;
+        padding: 1.5rem;
+        border: 2px solid #7f7fd5;
+        border-radius: 10px;
+    }
+
+    .citation-box {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-left: 4px solid #7f7fd5;
+        margin: 2rem 0;
+    }
+
+    .acc-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: linear-gradient(135deg, #7f7fd5 0%, #86a8e7 100%);
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.3s ease;
+    }
+
+    .acc-button:hover {
+        transform: translateY(-2px);
+    }
+
+    .fas {
+        margin-right: 0.5rem;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>{% block header_title %}OpenSpectro: An Open-Source 3D Spectroscopic Profiling Platform{% endblock %}</h1>
+  </header>
+  <main>
+    <section class="hero-section">
+        <div class="container">
+          <div class="logo-container">
+            <img src="../static/figure/home/logo.png" alt="OpenSpectro Logo" class="logo">
+            <span class="logo-text">OpenSpectro</span>
+          </div>
+          <h1>Spectroscopic Profiling for Biomedical Analysis</h1>
+        </div>
+      </section>
+      
+      <section class="content-section">
+        <div class="container">
+          <div class="paper-card">
+            <div class="abstract-section">
+              <h2><i class="fas fa-file-alt"></i>Abstract</h2>
+              <p>Spectroscopic analysis is essential for identifying optical-based molecular signatures—distinct patterns observed across various wavelengths. Understanding these signatures provides critical insights for designing wearable health-monitoring devices. In particular, constructing three-dimensional (3D) spectroscopic graphs of molecular spectra enables the optimization of multi-wavelength photoplethysmography (PPG) sensors, improving their accuracy and performance. However, no prior work has systematically mapped spectroscopic signatures to optimize wavelength combinations, slowing advancements in multi-wavelength PPG sensor deployment. To address this gap, we introduce OpenSpectro, an open-source spectroscopic profiling platform for visualizing and sharing molecular spectral data, particularly human physiological biomarkers. OpenSpectro features a preliminary spectroscopic database containing 17 biomarkers and a spectral attention optimization model that identifies customized wavelength attention weights for each biomarker. </p>
+            </div>
+      
+            <div class="features-grid">
+              <div class="feature-card">
+                <h3>3D Visualization</h3>
+                <p>Interactive 3D molecular signature analysis with real-time manipulation</p>
+              </div>
+              <div class="feature-card">
+                <h3>Wavelength Optimization</h3>
+                <p>Multi-PPG wavelength optimization given target biomarker signature</p>
+              </div>
+              <div class="feature-card">
+                <h3>Collaborative Platform</h3>
+                <p>Share and compare spectroscopic profiles with researchers worldwide</p>
+              </div>
+            </div>
+      
+            <div class="usage-section">
+              <h2><i class="fas fa-graduation-cap"></i> Platform Guide</h2>
+              <div class="usage-steps">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <h4>Database Navigation</h4>
+                  <p>Access our comprehensive biomarker library through intuitive search filters</p>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <h4>Biomarker Selection</h4>
+                  <p>Choose from 15+ physiological markers with detailed spectral profiles</p>
+                </div>
+                <div class="step">
+                  <div class="step-number">3</div>
+                  <h4>Interactive Analysis</h4>
+                  <p>Utilize our 3D visualization tools and threshold sliders for optimal configuration</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="citation-section">
+              <h2><i class="fas fa-quote-right"></i> Citation</h2>
+              <div class="citation-box">
+                <p>Please cite our work as:</p>
+                <code>
+                  Haoran Zhang, Elizabeth Courtney, Kyle Quinn, Amanda Watson (2025). "OpenSpectro: 3D Spectroscopic Profiling for Biomedical Analysis". 
+                  IEEE Engineering in Medicine and Biology Society. DOI: 10.xxxx/xxxxxx
+                </code>
+              </div>
+            </div>
+      
+            <div class="cta-section">
+              <a href="{{ url_for('database.page') }}" class="acc-button">
+                Explore Database <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+  </main>
+</body>
+</html>
