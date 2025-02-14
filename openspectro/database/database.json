@@ -17,7 +17,7 @@
     },
     {
         "ID": 1,
-        "BiomarkerName": "C-Reative Protein (Human)",
+        "BiomarkerName": "C-Reactive Protein (Human)",
         "ChemicalFormula": "C38H57N9O8",
         "Concentration": 100.0,
         "ConcentrationLabel": "uL/mL", 
@@ -223,6 +223,32 @@
         "Solvent": "PBS",
         "Source": "Human",
         "BioFunctionShort": "Transports triglycerides and cholesterol",
+        "BioFunctionLong": "",
+        "WikiLink": ""
+    },
+    {
+        "ID": 998,
+        "BiomarkerName": "Clear",
+        "ChemicalFormula": "H20",
+        "Concentration": 0.0,
+        "ConcentrationLabel": "mg/mL",
+        "Tags": [],
+        "Solvent": "NA",
+        "Source": "NA",
+        "BioFunctionShort": "Clear Solution Comparison",
+        "BioFunctionLong": "",
+        "WikiLink": ""
+    },
+    {
+        "ID": 999,
+        "BiomarkerName": "Background",
+        "ChemicalFormula": "NA",
+        "Concentration": 0.0,
+        "ConcentrationLabel": "mg/mL",
+        "Tags": [],
+        "Solvent": "NA",
+        "Source": "NA",
+        "BioFunctionShort": "Dark Intensity Comparison",
         "BioFunctionLong": "",
         "WikiLink": ""
     }
