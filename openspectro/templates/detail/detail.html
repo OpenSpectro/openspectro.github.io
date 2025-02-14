@@ -67,10 +67,21 @@
 
       <!-- Buttons -->
       <div class="action-buttons">
-        <button class="action-button">Absorbance</button>
-        <button class="action-button">Fluorescence</button>
-        <button class="action-button">2D Optimization</button>
-        <button class="action-button">3D Optimization</button>
+        <a href="{{ url_for('absorbance.page2D', id=biomarker.ID)}}">
+          <button class="action-button">2D Absorbance</button>
+        </a>
+        <a href="{{ url_for('absorbance.page3D', id=biomarker.ID)}}">
+          <button class="action-button">3D Absorbance</button>
+        </a>
+        <a href="{{ url_for('fluorescence.page', id=biomarker.ID)}}">
+          <button class="action-button">Fluorescence</button>
+        </a>
+        <a href="{{ url_for('optimization.page2D', id=biomarker.ID)}}">
+          <button class="action-button">2D Optimization</button>
+        </a>
+        <a href="{{ url_for('optimization.page3D', id=biomarker.ID)}}">
+          <button class="action-button">3D Optimization</button>
+        </a>
       </div>
 
       <!-- Back Button -->

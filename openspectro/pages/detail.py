@@ -2,7 +2,9 @@ from flask import Blueprint, render_template
 import os
 import json
 
-detail = Blueprint('detail', __name__)
+entity_name = 'detail'
+
+detail = Blueprint(entity_name, __name__)
 
 @detail.route('/<int:id>', methods=['GET'])
 def page(id):
@@ -20,4 +22,4 @@ def page(id):
         return "Biomarker not found", 404
 
     # Pass the biomarker data to the template
-    return render_template("detail/detail.html", CSSLink="/static/css/detail/style.css", biomarker=biomarker, moleculeLink=f"../static/molecules/{id}.png", cuvetteLink=f"../static/cuvette/{id+1}.png")
+    return render_template(f"{entity_name}/{entity_name}.html", CSSLink=f"/static/css/{entity_name}/{entity_name}.css", biomarker=biomarker, moleculeLink=f"../static/molecules/{id}.png", cuvetteLink=f"../static/cuvette/{id+1}.png")

@@ -2,7 +2,9 @@ from flask import Blueprint, render_template
 import os
 import json
 
-database = Blueprint('database', __name__)
+entity_name = 'database'
+
+database = Blueprint(entity_name, __name__)
 
 @database.route('/', methods=['GET', 'POST'])
 def page():
@@ -14,4 +16,4 @@ def page():
         biomarkers = json.load(file)
 
     # Pass the biomarkers data to the template
-    return render_template("database/database.html", CSSLink="/static/css/database/style.css", biomarkers=biomarkers, iconLink = "../static/figure/database/database.png")
+    return render_template(f"{entity_name}/{entity_name}.html", CSSLink=f"/static/css/{entity_name}/{entity_name}.css", biomarkers=biomarkers, iconLink = f"../static/figure/{entity_name}/database.png")

@@ -18,11 +18,11 @@ def create_app():
     from .pages.detail import detail
 
     # # Spectral Response Page
-    # from .pages.fluorescence import fluorescence
-    # from .pages.absorbance import absorbance
+    from .pages.fluorescence import fluorescence
+    from .pages.absorbance import absorbance
 
     # # Optimization table page
-    # from .pages.optimization import optimization
+    from .pages.optimization import optimization
 
     # # Instruction page for all formulas
     # from .pages.instruction import instruction
@@ -31,9 +31,9 @@ def create_app():
     app.register_blueprint(home, url_prefix = "/")
     app.register_blueprint(database, url_prefix = "/database")
     app.register_blueprint(detail, url_prefix = "/detail")
-    # app.register_blueprint(fluorescence, url_prefix = "/fluorescence")
-    # app.register_blueprint(absorbance, url_prefix = "/absorbance")
-    # app.register_blueprint(optimization, url_prefix = "/optimization")
+    app.register_blueprint(fluorescence, url_prefix = "/fluorescence")
+    app.register_blueprint(absorbance, url_prefix = "/absorbance")
+    app.register_blueprint(optimization, url_prefix = "/optimization")
     # app.register_blueprint(instruction, url_prefix = "/instruction")
 
     return app
