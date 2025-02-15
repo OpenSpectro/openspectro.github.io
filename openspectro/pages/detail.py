@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template
 import os
 import json
+from openspectro import BIOMARKERS
 
 entity_name = 'detail'
 
@@ -9,11 +10,7 @@ detail = Blueprint(entity_name, __name__)
 @detail.route('/<int:id>', methods=['GET'])
 def page(id):
     # Path to the JSON file containing biomarker data
-    database_json_path = os.path.join(os.path.dirname(__file__), '..', 'database', 'database.json')
-    
-    # Load the JSON data
-    with open(database_json_path, 'r') as file:
-        biomarkers = json.load(file)
+    biomarkers = BIOMARKERS
     
     # Find the biomarker with the matching ID
     biomarker = next((b for b in biomarkers if b['ID'] == id), None)

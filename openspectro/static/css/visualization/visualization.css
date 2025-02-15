@@ -52,7 +52,8 @@ h1 {
 
 /* Form Styling */
 .visualization-form {
-    max-width: 800px;
+    width: 100%;
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
     background: white;
@@ -97,6 +98,7 @@ h1 {
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.3s ease;
+    margin-top: 1rem; /* Added margin */
 }
 
 .visualization-form button:hover {
@@ -111,6 +113,7 @@ h1 {
     background: #f9f9f9;
     border-radius: 5px;
     border: 1px solid #ddd;
+    margin-bottom: 1rem; /* Added margin */
 }
 
 #thresholds label {
@@ -124,6 +127,7 @@ h1 {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the graph */
 }
 
 /* Back Button */

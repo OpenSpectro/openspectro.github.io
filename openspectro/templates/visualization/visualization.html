@@ -31,11 +31,17 @@
         {% endfor %}
       </select>
 
+      <label for="orientation">Orientation:</label>
+      <select id="orientation" name="orientation">
+        <option value="Orthogonal" {% if form_data and form_data.orientation == 'Orthogonal' %}selected{% endif %}>Orthogonal</option>
+        <option value="PassThrough" {% if form_data and form_data.orientation == 'PassThrough' %}selected{% endif %}>PassThrough</option>
+      </select>
+
       <label for="viz_type">Visualization Type:</label>
       <select id="viz_type" name="viz_type">
         <option value="absorbance" {% if form_data and form_data.viz_type == 'absorbance' %}selected{% endif %}>Absorbance</option>
-        <option value="intensity" {% if form_data and form_data.viz_type == 'intensity' %}selected{% endif %}>Intensity</option>
         <option value="fluorescence" {% if form_data and form_data.viz_type == 'fluorescence' %}selected{% endif %}>Fluorescence</option>
+        <option value="intensity" {% if form_data and form_data.viz_type == 'intensity' %}selected{% endif %}>Intensity</option>
       </select>
 
       <label for="dimension">Dimension:</label>

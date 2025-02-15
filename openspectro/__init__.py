@@ -13,6 +13,8 @@ def load_biomarkers():
     
     return biomarkers
 
+BIOMARKERS = load_biomarkers()
+
 def create_app():
     app = Flask(__name__)
     # app.config["SECRET_KEY"] = "letsGoOpenSpectro"
