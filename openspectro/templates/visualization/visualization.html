@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Visualization - OpenSpectro{% endblock %}
+{% block style %}
+  <link href="{{ url_for('static', filename='css/visualization/visualization.css') }}" rel="stylesheet">
+{% endblock %}
+{% block main_content %}
+
+<section class="hero-section">
+  <div class="container">
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='figure/visualization/visualization.png') }}" alt="Visualization Icon" class="logo">
+      <span class="logo-text">Biomarker Visualization</span>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <!-- Debugging line -->
+    {% if biomarkers %}
+      <p>Biomarkers loaded successfully!</p>
+    {% else %}
+      <p>No biomarkers found.</p>
+    {% endif %}
+
+    <form class="visualization-form" method="post">
+      <label for="biomarker_id">Biomarker ID:</label>
+      <select id="biomarker_id" name="biomarker_id">
+        {% for biomarker in biomarkers %}
+        <option value="{{ biomarker.ID }}" {% if form_data and form_data.biomarker_id == biomarker.ID %}selected{% endif %}>{{ biomarker.BiomarkerName }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="viz_type">Visualization Type:</label>
+      <select id="viz_type" name="viz_type">
+        <option value="absorbance" {% if form_data and form_data.viz_type == 'absorbance' %}selected{% endif %}>Absorbance</option>
+        <option value="intensity" {% if form_data and form_data.viz_type == 'intensity' %}selected{% endif %}>Intensity</option>
+        <option value="fluorescence" {% if form_data and form_data.viz_type == 'fluorescence' %}selected{% endif %}>Fluorescence</option>
+      </select>
+
+      <label for="dimension">Dimension:</label>
+      <select id="dimension" name="dimension">
+        <option value="2D" {% if form_data and form_data.dimension == '2D' %}selected{% endif %}>2D</option>
+        <option value="3D" {% if form_data and form_data.dimension == '3D' %}selected{% endif %}>3D</option>
+      </select>
+
+      <div id="thresholds">
+        <label for="intensity_threshold">Intensity Threshold:</label>
+        <input type="number" id="intensity_threshold" name="intensity_threshold" step="0.01" value="{{ form_data.intensity_threshold if form_data else '' }}">
+
+        <label for="absorbance_threshold">Absorbance Threshold:</label>
+        <input type="number" id="absorbance_threshold" name="absorbance_threshold" step="0.01" value="{{ form_data.absorbance_threshold if form_data else '' }}">
+      </div>
+
+      <button type="submit">Generate Graph</button>
+    </form>
+
+    {% if graph_html %}
+    <div class="graph-container">
+      {{ graph_html|safe }}
+    </div>
+    {% endif %}
+
+    <div>
+      <a href="{{ url_for('database.page') }}">
+        <i class="fas fa-arrow-left"></i> Back to Database
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById('viz_type').addEventListener('change', function() {
+    var thresholdsDiv = document.getElementById('thresholds');
+    if (this.value === 'absorbance' || this.value === 'fluorescence') {
+      thresholdsDiv.style.display = 'block';
+    } else {
+      thresholdsDiv.style.display = 'none';
+    }
+  });
+</script>
+{% endblock %}

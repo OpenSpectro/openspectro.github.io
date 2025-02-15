@@ -143,3 +143,10 @@ pre {
   font-family: monospace;
   white-space: pre-wrap; /* Ensures text wraps if it exceeds the container width */
 }
+
+.cta-section {
+    display: flex;
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button (if needed) */
+    margin-top: 20px; /* Optional: Add some spacing above the button */
+}

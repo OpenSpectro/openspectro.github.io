@@ -1,0 +1,153 @@
+/* Common styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fdfdfd;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #7f7fd5 0%, #86a8e7 100%);
+    padding: 2rem 0;
+    text-align: center;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: -3px;
+}
+
+.logo-text {
+    font-family: 'ChalkBoard';
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-left: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Form Styling */
+.visualization-form {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.visualization-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.visualization-form select,
+.visualization-form input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.visualization-form select:focus,
+.visualization-form input[type="number"]:focus {
+    border-color: #7f7fd5;
+    outline: none;
+}
+
+.visualization-form button {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #7f7fd5 0%, #86a8e7 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.visualization-form button:hover {
+    transform: translateY(-2px);
+}
+
+/* Thresholds Section */
+#thresholds {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#thresholds label {
+    margin-bottom: 0.5rem;
+}
+
+/* Graph Display Section */
+.graph-container {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Button */
+.back-button {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.back-button a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #7f7fd5 0%, #86a8e7 100%);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.back-button a:hover {
+    transform: translateY(-2px);
+}
+
+.back-button .fas {
+    margin-right: 0.5rem;
+}

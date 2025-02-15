@@ -57,32 +57,13 @@
             </a>
           </td>
         </tr>
+        <tr><td colspan="2">
+          <img src={{ moleculeLink }} alt="Molecule Image" class="molecule-image">
+        </td></tr>
+        <tr><td colspan="2">
+          <img src={{ cuvetteLink }} alt="Cuvette Image" class="cuvette-image">
+        </td></tr>
       </table>
-      
-      <!-- Images -->
-      <div>
-        <img src={{ moleculeLink }} alt="Molecule Image" class="molecule-image">
-        <img src={{ cuvetteLink }} alt="Cuvette Image" class="cuvette-image">
-      </div>
-
-      <!-- Buttons -->
-      <div class="action-buttons">
-        <a href="{{ url_for('absorbance.page2D', id=biomarker.ID)}}">
-          <button class="action-button">2D Absorbance</button>
-        </a>
-        <a href="{{ url_for('absorbance.page3D', id=biomarker.ID)}}">
-          <button class="action-button">3D Absorbance</button>
-        </a>
-        <a href="{{ url_for('fluorescence.page', id=biomarker.ID)}}">
-          <button class="action-button">Fluorescence</button>
-        </a>
-        <a href="{{ url_for('optimization.page2D', id=biomarker.ID)}}">
-          <button class="action-button">2D Optimization</button>
-        </a>
-        <a href="{{ url_for('optimization.page3D', id=biomarker.ID)}}">
-          <button class="action-button">3D Optimization</button>
-        </a>
-      </div>
 
       <!-- Back Button -->
       <div class="back-button">

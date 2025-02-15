@@ -56,12 +56,20 @@
         </td>
         </tr>
         {% endfor %}
+
     </tbody>
     </table>
+
+    <div class="cta-section">
+      <a href="{{ url_for('visualization.page') }}" class="acc-button">
+        Viusalization Tool <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+    
   </div>
   <!-- Back Button -->
   <div class="back-button">
-    <a href="{{ url_for('home.page') }}" class="acc-button">
+    <a href="{{ url_for('home.page') }}">
       <i class="fas fa-arrow-left"></i> Back to Homepage
     </a>
   </div>

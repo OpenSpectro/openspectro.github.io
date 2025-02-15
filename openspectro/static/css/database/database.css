@@ -94,3 +94,30 @@
     margin-top: 2rem;
   }
   
+
+  .cta-section {
+    display: flex;
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button (if needed) */
+    margin-top: 20px; /* Optional: Add some spacing above the button */
+}
+
+.copy-button:hover {
+  background: #86a8e7;
+}
+
+.acc-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #7f7fd5 0%, #86a8e7 100%);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.acc-button:hover {
+  transform: translateY(-2px);
+}
