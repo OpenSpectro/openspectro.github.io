@@ -27,7 +27,12 @@
       <label for="biomarker_id">Biomarker ID:</label>
       <select id="biomarker_id" name="biomarker_id">
         {% for biomarker in biomarkers %}
-        <option value="{{ biomarker.ID }}" {% if form_data and form_data.biomarker_id == biomarker.ID %}selected{% endif %}>{{ biomarker.BiomarkerName }}</option>
+        <option value="{{ biomarker.ID }}"
+            {% if form_data and form_data.biomarker_id == biomarker.ID|string %}
+                selected
+            {% endif %}>
+            {{ biomarker.BiomarkerName }}
+        </option>
         {% endfor %}
       </select>
 

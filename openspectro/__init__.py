@@ -11,14 +11,14 @@ clear_ID = 998
 background_ID = 999
 
 laser_wavelengths = np.arange(380, 1101, 1)
-spectrometer_wavelengths = pd.read_csv("database/PassThrough/2D/Background.csv")["# Wavelength"].values
-background_intensity = pd.read_csv("database/PassThrough/2D/Background.csv")["Intensity"].values.astype(float)
+spectrometer_wavelengths = pd.read_csv("openspectro/database/PassThrough/2D/Background.csv")["# Wavelength"].values
+background_intensity = pd.read_csv("openspectro/database/PassThrough/2D/Background.csv")["Intensity"].values.astype(float)
 
 def load_biomarkers():
     database_json_path = os.path.join(os.path.dirname(__file__), 'database', 'database.json')
     with open(database_json_path, 'r') as file:
         biomarkers = json.load(file)
-    
+    # print(f"All biomarkers are {biomarkers}")
     return biomarkers
 
 BIOMARKERS = load_biomarkers()

@@ -17,7 +17,7 @@
     },
     {
         "ID": 1,
-        "BiomarkerName": "C-Reactive Protein (Human)",
+        "BiomarkerName": "CReactiveProtein",
         "ChemicalFormula": "C38H57N9O8",
         "Concentration": 100.0,
         "ConcentrationLabel": "uL/mL", 
@@ -72,7 +72,7 @@
     },
     {
         "ID": 5,
-        "BiomarkerName": "Glucose",
+        "BiomarkerName": "BloodGlucose",
         "ChemicalFormula": "C6H12O6",
         "Concentration": 25.00,
         "ConcentrationLabel": "uL/mL",
@@ -85,7 +85,7 @@
     },
     {
         "ID": 6,
-        "BiomarkerName": "Hemoglobin A_e",
+        "BiomarkerName": "HemoglobinAe",
         "ChemicalFormula": "C2952H4464N3248O812S8Fe4",
         "Concentration": 3.33,
         "ConcentrationLabel": "mg/mL",
@@ -98,7 +98,7 @@
     },
     {
         "ID": 7,
-        "BiomarkerName": "Hemoglobin Human",
+        "BiomarkerName": "HemoglobinHuman",
         "ChemicalFormula": "C2952H4464N3248O812S8Fe4",
         "Concentration": 5.00,
         "ConcentrationLabel": "mg/mL",
@@ -111,7 +111,7 @@
     },
     {
         "ID": 8,
-        "BiomarkerName": "High Density Lipoprotein",
+        "BiomarkerName": "HDL",
         "ChemicalFormula": "C27H46O",
         "Concentration": 500.0,
         "ConcentrationLabel": "uL/mL",
@@ -124,7 +124,7 @@
     },
     {
         "ID": 9,
-        "BiomarkerName": "Human Leptin",
+        "BiomarkerName": "LeptinHuman",
         "ChemicalFormula": "C87H138N22O28S2",
         "Concentration": 0.50,
         "ConcentrationLabel": "mg/mL",
@@ -163,7 +163,7 @@
     },
     {
         "ID": 12,
-        "BiomarkerName": "Sodium Lactate",
+        "BiomarkerName": "SodiumLactate",
         "ChemicalFormula": "C3H5NaO3",
         "Concentration": 20.00,
         "ConcentrationLabel": "mg/mL",
@@ -176,7 +176,7 @@
     },
     {
         "ID": 13,
-        "BiomarkerName": "Tryptophan",
+        "BiomarkerName": "TryptophanCRS",
         "ChemicalFormula": "C11H12N2O2",
         "Concentration": 1.33,
         "ConcentrationLabel": "mg/mL",
@@ -189,7 +189,7 @@
     },
     {
         "ID": 14,
-        "BiomarkerName": "Tyrosine",
+        "BiomarkerName": "TyrosineCRS",
         "ChemicalFormula": "C9H11NO3",
         "Concentration": 0.70,
         "ConcentrationLabel": "mg/mL",
@@ -215,7 +215,7 @@
     },
     {
         "ID": 16,
-        "BiomarkerName": "Very Low Density Lipoprotein",
+        "BiomarkerName": "VLDL",
         "ChemicalFormula": "C55H98O6",
         "Concentration": 0.30,
         "ConcentrationLabel": "mg/mL",
@@ -229,26 +229,26 @@
     {
         "ID": 998,
         "BiomarkerName": "Clear",
-        "ChemicalFormula": "H20",
-        "Concentration": 0.0,
+        "ChemicalFormula": "C55H98O6",
+        "Concentration": 0.30,
         "ConcentrationLabel": "mg/mL",
         "Tags": [],
-        "Solvent": "NA",
-        "Source": "NA",
-        "BioFunctionShort": "Clear Solution Comparison",
+        "Solvent": "PBS",
+        "Source": "Human",
+        "BioFunctionShort": "Transports triglycerides and cholesterol",
         "BioFunctionLong": "",
         "WikiLink": ""
     },
     {
         "ID": 999,
         "BiomarkerName": "Background",
-        "ChemicalFormula": "NA",
-        "Concentration": 0.0,
+        "ChemicalFormula": "C55H98O6",
+        "Concentration": 0.30,
         "ConcentrationLabel": "mg/mL",
         "Tags": [],
-        "Solvent": "NA",
-        "Source": "NA",
-        "BioFunctionShort": "Dark Intensity Comparison",
+        "Solvent": "PBS",
+        "Source": "Human",
+        "BioFunctionShort": "Transports triglycerides and cholesterol",
         "BioFunctionLong": "",
         "WikiLink": ""
     }
