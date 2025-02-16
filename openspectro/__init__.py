@@ -1,10 +1,18 @@
 from flask import Flask
 from datetime import timedelta
+import numpy as np
+import pandas as pd
 import os
 import json
 
 lineSeperator = ""
 WEBSITE_NAME = "OpenSpectro"
+clear_ID = 998
+background_ID = 999
+
+laser_wavelengths = np.arange(380, 1101, 1)
+spectrometer_wavelengths = pd.read_csv("database/PassThrough/2D/Background.csv")["# Wavelength"].values
+background_intensity = pd.read_csv("database/PassThrough/2D/Background.csv")["Intensity"].values.astype(float)
 
 def load_biomarkers():
     database_json_path = os.path.join(os.path.dirname(__file__), 'database', 'database.json')
@@ -14,6 +22,7 @@ def load_biomarkers():
     return biomarkers
 
 BIOMARKERS = load_biomarkers()
+
 
 def create_app():
     app = Flask(__name__)
