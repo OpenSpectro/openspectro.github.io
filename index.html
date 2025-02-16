@@ -215,7 +215,7 @@
 git clone https://github.com/OpenSpectro/openspectro.github.io.git
 cd openspectro.github.io
 conda env create -f environment.yml
-python main.py
+gunicorn main:app
                   </pre>
                 </code>
                 <button class="copy-button" onclick="copyToClipboard('github-code')">Copy</button>
@@ -243,11 +243,11 @@ python main.py
               </div>
             </div>
       
-            <div class="cta-section">
+            <!-- <div class="cta-section">
               <a href="{{ url_for('database.page') }}" class="acc-button">
                 Explore Database <i class="fas fa-arrow-right"></i>
               </a>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>

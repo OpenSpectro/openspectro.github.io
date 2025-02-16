@@ -1,4 +1,4 @@
-name: ocean
+name: spectro
 channels:
   - conda-forge
   - defaults
