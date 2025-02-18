@@ -205,6 +205,8 @@ def generate_graph(biomarker_id, orientation, viz_type, dimension, intensity_thr
                 # Adjust layout, labels, camera, etc.
                 fig.update_layout(
                     title=f'3D Absorbance for sample: {sample_name} (Intensity Threshold = {intensity_threshold}; Absorbance Threhsold = {absorbance_threshold})',
+                    width=1200,    # <--- Adjust as desired
+                    height=700,    # <--- Adjust as desired
                     scene=dict(
                         xaxis=dict(
                             title='Spectrometer Wavelength (nm)',
