@@ -227,6 +227,32 @@
         "WikiLink": ""
     },
     {
+        "ID": 17,
+        "BiomarkerName": "Fluorescein",
+        "ChemicalFormula": "C30H20O10",
+        "Concentration": 5.00,
+        "ConcentrationLabel": "mmol",
+        "Tags": ["Fluorescent"],
+        "Solvent": "1% DMSO in pH buffered Saline 7.4",
+        "Source": "Human",
+        "BioFunctionShort": "Fluorescein is an orange-red dye that is used in various medical and research applications",
+        "BioFunctionLong": "Fluorescein is an organic compound and dye based on the xanthene tricyclic structural motif, formally belonging to triarylmethine dyes family. It is available as a dark orange/red powder slightly soluble in water and alcohol. It is used as a fluorescent tracer in many applications",
+        "WikiLink": ""
+    },
+    {
+        "ID": 18,
+        "BiomarkerName": "Tetramethylrhodamine",
+        "ChemicalFormula": "C30H20O10",
+        "Concentration": 5.00,
+        "ConcentrationLabel": "mmol",
+        "Tags": [],
+        "Solvent": "1% DMSO in pH buffered Saline 7.4",
+        "Source": "Human",
+        "BioFunctionShort": "Tetramethylrhodamine is a bright orange-fluorescent dye",
+        "BioFunctionLong": "Rhodamine is a family of related dyes, a subset of the triarylmethane dyes. They are derivatives of xanthene. Important members of the rhodamine family are rhodamine 6G, Rhodamin WT, Texas Red (Sulforhodamin 101), rhodamine 123, and rhodamine B. They are mainly used to dye paper and inks, but they lack the lightfastness for fabric dyeing.",
+        "WikiLink": ""
+    },
+    {
         "ID": 998,
         "BiomarkerName": "Clear",
         "ChemicalFormula": "C55H98O6",

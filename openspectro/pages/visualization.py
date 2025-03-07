@@ -83,43 +83,74 @@ def generate_graph(biomarker_id, orientation, viz_type, dimension, intensity_thr
     # Dummy graph generation for demonstration
 
     if orientation == "Orthogonal":
-        
-        sample_intensity, sample_name = file_search(orientation, biomarker_id)
-        clear_intensity, _ = file_search(orientation, clear_ID)
-        # print(f"sample_intensity is {sample_intensity}")
-        if viz_type == "fluorescence":
-            return default_graph("3D")
-        
-        elif viz_type == "intensity":
-            sample_intensity -= background_intensity
-            fig = go.Figure(data=[go.Surface(
-                x=spectrometer_wavelengths,
-                y=laser_wavelengths,
-                z=sample_intensity
-            )])
-            fig.update_layout(
-                title=f'Orthogonal Intensity graph for sample: {sample_name}',
-                width=1200,    # <--- Adjust as desired
-                height=700,    # <--- Adjust as desired
-                scene=dict(
-                    xaxis=dict(
-                        title='Spectrometer Wavelength (nm)',
-                        range=[spectrometer_wavelengths.min(), spectrometer_wavelengths.max()],
-                    ),
-                    yaxis=dict(
-                        title='Laser Wavelength (nm)',
-                        range=[laser_wavelengths.min(), laser_wavelengths.max()],
-                    ),
-                    zaxis=dict(
-                        title='Orthogonal Intensity'
-                    ),
-                    camera=dict(
-                        eye=dict(x=1.5, y=1.5, z=0.5)
+
+            sample_intensity, sample_name = file_search(orientation, biomarker_id)
+            clear_intensity, _ = file_search(orientation, clear_ID)
+
+            if viz_type == "fluorescence":
+                return default_graph("3D")
+
+            elif viz_type == "intensity":
+                sample_intensity -= background_intensity
+                
+                # Create the main surface
+                fig = go.Figure(data=[go.Surface(
+                    x=spectrometer_wavelengths,
+                    y=laser_wavelengths,
+                    z=sample_intensity
+                )])
+
+                # --- Add the diagonal plane y = x (for x >= 0, y >= 0) ---
+                # 1) Define a 1D range for x
+                x_min = max(0, spectrometer_wavelengths.min())  # to ensure positivity
+                x_max = spectrometer_wavelengths.max()
+                x_vals = np.linspace(x_min, x_max, 50)
+
+                # 2) Decide on a range for z
+                z_min = sample_intensity.min()
+                z_max = sample_intensity.max()
+                z_vals = np.linspace(z_min, z_max, 50)
+
+                # 3) Create a meshgrid so we can form a rectangular plane in (x,z)
+                X, Z = np.meshgrid(x_vals, z_vals)
+
+                # 4) y = x along this plane
+                Y = X
+
+                # 5) Add the diagonal plane as a partially transparent surface
+                plane_surface = go.Surface(
+                    x=X,
+                    y=Y,
+                    z=Z,
+                    showscale=False,      # Hide separate color scale
+                    opacity=0.3           # Partially transparent for clarity
+                )
+                fig.add_trace(plane_surface)
+                # --- End plane addition ---
+
+                fig.update_layout(
+                    title=f'Orthogonal Intensity graph for sample: {sample_name}',
+                    width=1200,    # <--- Adjust as desired
+                    height=700,    # <--- Adjust as desired
+                    scene=dict(
+                        xaxis=dict(
+                            title='Spectrometer Wavelength (nm)',
+                            range=[spectrometer_wavelengths.min(), spectrometer_wavelengths.max()],
+                        ),
+                        yaxis=dict(
+                            title='Laser Wavelength (nm)',
+                            range=[laser_wavelengths.min(), laser_wavelengths.max()],
+                        ),
+                        zaxis=dict(
+                            title='Orthogonal Intensity'
+                        ),
+                        camera=dict(
+                            eye=dict(x=1.5, y=1.5, z=0.5)
+                        )
                     )
                 )
-            )
 
-            return fig.to_html(full_html=False)
+                return fig.to_html(full_html=False)
 
     elif orientation == "PassThrough":
 
