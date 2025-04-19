@@ -17,6 +17,14 @@
 <section class="content-section">
   <div class="container">
     <!-- Debugging line -->
+    <br>
+    {% if message_box %}
+    <div class="info-banner">
+      <i class="fas fa-info-circle"></i>
+      {{ message_box }}
+    </div>
+    {% endif %}
+
     {% if biomarkers %}
       <p>Biomarkers loaded successfully!</p>
     {% else %}
@@ -78,9 +86,21 @@
       </a>
     </div>
   </div>
+
 </section>
 
 <script>
 
 </script>
 {% endblock %}
+
+<script>
+  setTimeout(() => {
+    const banner = document.querySelector('.info-banner');
+    if (banner) {
+      banner.style.transition = "opacity 1s ease-out";
+      banner.style.opacity = 0;
+      setTimeout(() => banner.remove(), 1000);
+    }
+  }, 5000); // 5 seconds
+</script>

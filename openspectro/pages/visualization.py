@@ -13,7 +13,7 @@ visualization = Blueprint(entity_name, __name__)
 @visualization.route('/', methods=['GET', 'POST'])
 def page():
     biomarkers = BIOMARKERS
-    # print("Loaded Biomarkers:", biomarkers)  # Debugging line
+    message_box = ""
 
     if request.method == 'POST':
         print(f"POST Form is {request.form}")
@@ -22,15 +22,39 @@ def page():
         orientation = request.form.get('orientation')
         viz_type = request.form.get('viz_type')
         dimension = request.form.get('dimension')
+
         intensity_threshold = request.form.get('intensity_threshold', type=float)
         absorbance_threshold = request.form.get('absorbance_threshold', type=float)
 
-        # Generate graph (pseudo-code, adjust according to your actual graph generation logic)
-        graph_html = generate_graph(biomarker_id, orientation, viz_type, dimension, intensity_threshold, absorbance_threshold)
+        # Check for missing thresholds and set defaults
+        if intensity_threshold is None:
+            intensity_threshold = 100.0
+            message_box += "Using default Intensity Threshold = 100. "
 
-        return render_template(f"{entity_name}/{entity_name}.html", biomarkers=biomarkers, CSSLink=f"../static/css/{entity_name}/{entity_name}.css", graph_html=graph_html, form_data=request.form)
+        if absorbance_threshold is None:
+            absorbance_threshold = 0.1
+            message_box += "Using default Absorbance Threshold = 0.1."
 
-    return render_template(f"{entity_name}/{entity_name}.html", biomarkers=biomarkers, CSSLink=f"../static/css/{entity_name}/{entity_name}.css")
+        # Generate the graph
+        graph_html = generate_graph(
+            biomarker_id, orientation, viz_type, dimension,
+            intensity_threshold, absorbance_threshold
+        )
+
+        return render_template(
+            f"{entity_name}/{entity_name}.html",
+            biomarkers=biomarkers,
+            CSSLink=f"../static/css/{entity_name}/{entity_name}.css",
+            graph_html=graph_html,
+            form_data=request.form,
+            message_box=message_box  # 👈 pass to template
+        )
+
+    return render_template(
+        f"{entity_name}/{entity_name}.html",
+        biomarkers=biomarkers,
+        CSSLink=f"../static/css/{entity_name}/{entity_name}.css"
+    )
 
 def file_search(orientation, biomarker_id, dimension="3D"):
     biomarkers = BIOMARKERS
@@ -221,7 +245,7 @@ def generate_graph(biomarker_id, orientation, viz_type, dimension, intensity_thr
             if dimension == "2D":
                 numerator = sample_intensity - background_intensity
                 denominator = clear_intensity - background_intensity
-                        # Avoid divide by zero by replacing non-positive values
+                # Avoid divide by zero by replacing non-positive values
                 safe_numerator   = np.where(numerator   <= 0, 1e-10, numerator)
                 safe_denominator = np.where(denominator <= 0, 1e-10, denominator)
 
