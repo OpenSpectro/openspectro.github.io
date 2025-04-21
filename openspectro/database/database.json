@@ -6,8 +6,7 @@
         "Concentration": 1.67,
         "ConcentrationLabel": "mg/mL",
         "Tags": [
-            "Clear",
-            "Expensive"
+            "Metabolite", "Waste Product"
         ],
         "Solvent": "Alcohol",
         "Source": "Human",
@@ -22,8 +21,7 @@
         "Concentration": 100.0,
         "ConcentrationLabel": "uL/mL", 
         "Tags": [
-            "Clear",
-            "Expensive"
+            "Protein", "Inflammatory Marker"
         ],
         "Solvent": "PBS",
         "Source": "Human",
@@ -37,12 +35,14 @@
         "ChemicalFormula": "C57H91N19O16",
         "Concentration": 4.00,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Protein", "Structural"
+        ],
         "Solvent": "PBS",
         "Source": "Human",
         "BioFunctionShort": "Structural support to the connective tissues",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Collagen is the main structural protein in the extracellular matrix of connective tissues in animals. It is the most abundant protein in mammals, providing structural support and strength to skin, bones, tendons, ligaments, and other tissues.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Collagen"
     },
     {
         "ID": 3,
@@ -50,12 +50,14 @@
         "ChemicalFormula": "C4H7N3O",
         "Concentration": 10.00,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Metabolite", "Waste Product"
+        ],
         "Solvent": "PBS",
         "Source": "Chem",
         "BioFunctionShort": "Waste product of muscle metabolism",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Creatinine is a breakdown product of creatine phosphate from muscle and protein metabolism. It is produced at a fairly constant rate by the body and excreted by the kidneys, making it a useful indicator of renal function.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Creatinine"
     },
     {
         "ID": 4,
@@ -63,12 +65,14 @@
         "ChemicalFormula": "C149H248IN47O42",
         "Concentration": 13.33,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Hormone", "Regulatory"
+        ],
         "Solvent": "PBS",
         "Source": "Human",
         "BioFunctionShort": "Stimulates hunger, regulates energy",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Ghrelin is a hormone produced primarily by the stomach that stimulates appetite and increases food intake. It also plays roles in regulating energy balance, promoting fat storage, and stimulating the release of growth hormone.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Ghrelin"
     },
     {
         "ID": 5,
@@ -76,12 +80,14 @@
         "ChemicalFormula": "C6H12O6",
         "Concentration": 25.00,
         "ConcentrationLabel": "uL/mL",
-        "Tags": [],
+        "Tags": [
+            "Metabolite", "Energy Source"
+        ],
         "Solvent": "PBS",
         "Source": "Human",
         "BioFunctionShort": "Primary energy source for cells",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Blood glucose, or blood sugar, is the main sugar found in your blood. It is your body's primary source of energy, derived from the food you eat. The body regulates blood glucose levels to ensure a steady supply of energy to cells.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Blood_sugar_level"
     },
     {
         "ID": 6,
@@ -89,12 +95,14 @@
         "ChemicalFormula": "C2952H4464N3248O812S8Fe4",
         "Concentration": 3.33,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Protein", "Oxygen Transport"
+        ],
         "Solvent": "PBS",
         "Source": "Human",
         "BioFunctionShort": "Transports oxygen from the lungs",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Hemoglobin is a protein in red blood cells that contains iron and carries oxygen from the lungs to the body's tissues. It also helps transport carbon dioxide from the tissues back to the lungs.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Hemoglobin"
     },
     {
         "ID": 7,
@@ -102,12 +110,14 @@
         "ChemicalFormula": "C2952H4464N3248O812S8Fe4",
         "Concentration": 5.00,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Protein", "Oxygen Transport"
+        ],
         "Solvent": "PBS",
         "Source": "Human",
         "BioFunctionShort": "Transports oxygen from the lungs",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Hemoglobin is a protein in red blood cells that contains iron and carries oxygen from the lungs to the body's tissues. It also helps transport carbon dioxide from the tissues back to the lungs.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Hemoglobin"
     },
     {
         "ID": 8,
@@ -115,12 +125,14 @@
         "ChemicalFormula": "C27H46O",
         "Concentration": 500.0,
         "ConcentrationLabel": "uL/mL",
-        "Tags": [],
+        "Tags": [
+            "Lipoprotein", "Transport"
+        ],
         "Solvent": "PBS",
         "Source": "Human",
         "BioFunctionShort": "Transports cholesterol to liver",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "High-density lipoprotein (HDL) is one of the five major groups of lipoproteins. It transports cholesterol from the body's tissues back to the liver for excretion or recycling, playing a key role in lipid metabolism and cardiovascular health.",
+        "WikiLink": "https://en.wikipedia.org/wiki/High-density_lipoprotein"
     },
     {
         "ID": 9,
@@ -128,12 +140,14 @@
         "ChemicalFormula": "C87H138N22O28S2",
         "Concentration": 0.50,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Hormone", "Regulatory"
+        ],
         "Solvent": "PBS",
         "Source": "Animal",
         "BioFunctionShort": "Regulates energy balance",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Leptin is a hormone predominantly made by adipose cells that helps to regulate energy balance by inhibiting hunger. It acts on receptors in the hypothalamus to suppress appetite and increase energy expenditure.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Leptin"
     },
     {
         "ID": 10,
@@ -141,12 +155,14 @@
         "ChemicalFormula": "C256H381N65O77S6",
         "Concentration": 2.50,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Hormone", "Regulatory"
+        ],
         "Solvent": "PBS",
         "Source": "Synthesized",
         "BioFunctionShort": "Regulates blood glucose levels",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Insulin is a peptide hormone produced by beta cells of the pancreatic islets encoded in humans by the insulin (INS) gene. It is the main anabolic hormone of the body. It regulates the metabolism of carbohydrates, fats, and protein by promoting the absorption of glucose from the blood into cells of the liver, fat, and skeletal muscles. In these tissues the absorbed glucose is converted into either glycogen, via glycogenesis, or fats (triglycerides), via lipogenesis; in the liver, glucose is converted into both. Glucose production and secretion by the liver are strongly inhibited by high concentrations of insulin in the blood. Circulating insulin also affects the synthesis of proteins in a wide variety of tissues. It is thus an anabolic hormone, promoting the conversion of small molecules in the blood into large molecules in the cells. Low insulin in the blood has the opposite effect, promoting widespread catabolism, especially of reserve body fat.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Insulin"
     },
     {
         "ID": 11,
@@ -154,12 +170,15 @@
         "ChemicalFormula": "C13H16N2O2",
         "Concentration": 2.00,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Hormone", "Regulatory"
+        ],
         "Solvent": "PBS",
         "Source": "Animal",
         "BioFunctionShort": "Endocrine rhythm regulation",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Melatonin is a hormone produced by the pineal gland in the brain, primarily during the night. It plays a crucial role in regulating the sleep-wake cycle, also known as the circadian rhythm, by signaling the body to prepare for sleep.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Melatonin"
+
     },
     {
         "ID": 12,
@@ -167,12 +186,14 @@
         "ChemicalFormula": "C3H5NaO3",
         "Concentration": 20.00,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Metabolite", "Buffering Agent"
+        ],
         "Solvent": "PBS",
         "Source": "Chem",
         "BioFunctionShort": "Electrolyte replenisher buffering agent",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Sodium lactate is the sodium salt of lactic acid, produced by fermentation of a sugar source such as maize or beets. It is commonly used in medical settings as a component of intravenous fluids to replenish electrolytes and as a buffering agent to maintain pH balance.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Sodium_lactate"
     },
     {
         "ID": 13,
@@ -180,12 +201,14 @@
         "ChemicalFormula": "C11H12N2O2",
         "Concentration": 1.33,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Amino Acid", "Precursor"
+        ],
         "Solvent": "PBS",
         "Source": "Human",
         "BioFunctionShort": "Precursor for serotonin, melatonin",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Tryptophan is an essential α-amino acid used in the biosynthesis of proteins. It serves as a precursor to the neurotransmitter serotonin, the hormone melatonin, and vitamin B3 (niacin), playing a significant role in mood regulation and sleep.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Tryptophan"
     },
     {
         "ID": 14,
@@ -193,12 +216,14 @@
         "ChemicalFormula": "C9H11NO3",
         "Concentration": 0.70,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Amino Acid", "Precursor"
+        ],
         "Solvent": "PBS",
         "Source": "Animal",
         "BioFunctionShort": "Precursor for neurotransmitters",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Tyrosine is one of the 20 standard amino acids used by cells to synthesize proteins. It is a precursor for several important neurotransmitters, including dopamine, norepinephrine, and epinephrine, which are critical for brain function and mood regulation.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Tyrosine"
     },
     {
         "ID": 15,
@@ -206,12 +231,14 @@
         "ChemicalFormula": "CH4N2O",
         "Concentration": 100.0,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Metabolite", "Waste Product"
+        ],
         "Solvent": "PBS",
         "Source": "Chem",
         "BioFunctionShort": "Waste product formed in the liver",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Urea is an organic compound formed from the breakdown of nitrogen and proteins. It is produced in the liver through the urea cycle, which converts toxic ammonia into less harmful urea, subsequently excreted via urine.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Urea_cycle"
     },
     {
         "ID": 16,
@@ -219,12 +246,14 @@
         "ChemicalFormula": "C55H98O6",
         "Concentration": 0.30,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Lipoprotein", "Transport"
+        ],
         "Solvent": "PBS",
         "Source": "Human",
         "BioFunctionShort": "Transports triglycerides and cholesterol",
-        "BioFunctionLong": "",
-        "WikiLink": ""
+        "BioFunctionLong": "Very-low-density lipoprotein (VLDL), density relative to extracellular water, is a type of lipoprotein made by the liver. VLDL is one of the five major groups of lipoproteins (chylomicrons, VLDL, intermediate-density lipoprotein, low-density lipoprotein, high-density lipoprotein) that enable fats and cholesterol to move within the water-based solution of the bloodstream. VLDL is assembled in the liver from triglycerides, cholesterol, and apolipoproteins. VLDL is converted in the bloodstream to low-density lipoprotein (LDL) and intermediate-density lipoprotein (IDL). VLDL particles have a diameter of 30–80 nanometers (nm). VLDL transports endogenous products, whereas chylomicrons transport exogenous (dietary) products. In the early 2010s both the lipid composition and protein composition of this lipoprotein were characterised in great detail.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Very_low-density_lipoprotein"
     },
     {
         "ID": 17,
@@ -232,12 +261,14 @@
         "ChemicalFormula": "C30H20O10",
         "Concentration": 5.00,
         "ConcentrationLabel": "mmol",
-        "Tags": ["Fluorescent"],
+        "Tags": [
+            "Dye", "Imaging", "Synthetic"
+        ],
         "Solvent": "1% DMSO in pH buffered Saline 7.4",
         "Source": "Human",
         "BioFunctionShort": "Fluorescein is an orange-red dye that is used in various medical and research applications",
-        "BioFunctionLong": "Fluorescein is an organic compound and dye based on the xanthene tricyclic structural motif, formally belonging to triarylmethine dyes family. It is available as a dark orange/red powder slightly soluble in water and alcohol. It is used as a fluorescent tracer in many applications",
-        "WikiLink": ""
+        "BioFunctionLong": "Fluorescein is an organic compound and dye based on the xanthene tricyclic structural motif, belonging to the triarylmethine dyes family. It is widely used as a fluorescent tracer in various applications, including medical diagnostics and biological research.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Fluorescein"
     },
     {
         "ID": 18,
@@ -245,12 +276,14 @@
         "ChemicalFormula": "C30H20O10",
         "Concentration": 5.00,
         "ConcentrationLabel": "mmol",
-        "Tags": [],
+        "Tags": [
+            "Dye", "Imaging", "Synthetic"
+        ],
         "Solvent": "1% DMSO in pH buffered Saline 7.4",
         "Source": "Human",
         "BioFunctionShort": "Tetramethylrhodamine is a bright orange-fluorescent dye",
-        "BioFunctionLong": "Rhodamine is a family of related dyes, a subset of the triarylmethane dyes. They are derivatives of xanthene. Important members of the rhodamine family are rhodamine 6G, Rhodamin WT, Texas Red (Sulforhodamin 101), rhodamine 123, and rhodamine B. They are mainly used to dye paper and inks, but they lack the lightfastness for fabric dyeing.",
-        "WikiLink": ""
+        "BioFunctionLong": "Tetramethylrhodamine is a fluorescent dye used in chemistry for labeling peptides and proteins for visualization and analysis in techniques such as microfluidic devices and fluorescence microscopy.",
+        "WikiLink": "https://en.wikipedia.org/wiki/Rhodamine"
     },
     {
         "ID": 998,
@@ -258,11 +291,13 @@
         "ChemicalFormula": "C55H98O6",
         "Concentration": 0.30,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Control", "Negative Control"
+        ],
         "Solvent": "PBS",
         "Source": "Human",
-        "BioFunctionShort": "Transports triglycerides and cholesterol",
-        "BioFunctionLong": "",
+        "BioFunctionShort": "None",
+        "BioFunctionLong": "None",
         "WikiLink": ""
     },
     {
@@ -271,11 +306,13 @@
         "ChemicalFormula": "C55H98O6",
         "Concentration": 0.30,
         "ConcentrationLabel": "mg/mL",
-        "Tags": [],
+        "Tags": [
+            "Control", "Negative Control"
+        ],
         "Solvent": "PBS",
         "Source": "Human",
-        "BioFunctionShort": "Transports triglycerides and cholesterol",
-        "BioFunctionLong": "",
+        "BioFunctionShort": "None",
+        "BioFunctionLong": "None",
         "WikiLink": ""
     }
 ]
