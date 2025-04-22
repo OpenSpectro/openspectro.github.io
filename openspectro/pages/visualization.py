@@ -104,9 +104,11 @@ def default_graph(dimension):
     return fig.to_html(full_html=False)
 
 def generate_graph(biomarker_id, orientation, viz_type, dimension, intensity_threshold, absorbance_threshold):
-    # Dummy graph generation for demonstration
 
     if orientation == "Orthogonal":
+        # Sample fluorescence can also be compared to clear intensity by
+        # F_{\lambda} = -\log_{10}(\frac{{R_{\lambda}} - {B_{\lambda}}}{{S_{\lambda}} - {B_{\lambda}}})
+        # But visualization result will be very close
 
         sample_intensity, sample_name = file_search(orientation, biomarker_id)
         clear_intensity, _ = file_search(orientation, clear_ID)
@@ -174,6 +176,7 @@ def generate_graph(biomarker_id, orientation, viz_type, dimension, intensity_thr
             return fig.to_html(full_html=False)
 
         elif viz_type == "intensity":
+            
             sample_intensity -= background_intensity
             
             # Create the main surface
@@ -276,8 +279,16 @@ def generate_graph(biomarker_id, orientation, viz_type, dimension, intensity_thr
                     y=A,
                     mode='lines+markers',
                     name=f'2D Pass-through Absorbance Curve graph for sample {sample_name} (Intensity Threshold = {intensity_threshold}; Absorbance Threshold = {absorbance_threshold})',
+                    line=dict(color='red', width=2),  # Line color and width
+                    marker=dict(size=2, color='red'),  # Marker size and color
                     hovertemplate='<b>X:</b> %{x}<br><b>Y:</b> %{y}<extra></extra>'
                 ))
+
+                # Add x-axis and y-axis captions
+                fig.update_layout(
+                    xaxis_title='Wavelength (nm)',
+                    yaxis_title='Absorbance'
+                )
 
                 return fig.to_html(full_html=False)
 
@@ -352,6 +363,12 @@ def generate_graph(biomarker_id, orientation, viz_type, dimension, intensity_thr
                     name=f'2D Pass-through Intensity Curve graph for sample {sample_name}',
                     hovertemplate='<b>X:</b> %{x}<br><b>Y:</b> %{y}<extra></extra>'
                 ))
+                # Add x-axis and y-axis captions
+                fig.update_layout(
+                    xaxis_title='Wavelength (nm)',
+                    yaxis_title='Absorbance'
+                )
+
                 return fig.to_html(full_html=False)
             elif dimension == "3D":
                 sample_intensity -= background_intensity

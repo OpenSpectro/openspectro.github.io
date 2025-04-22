@@ -48,3 +48,20 @@ h1 { font-size: 1.8rem; font-weight: 700; text-shadow: 1px 1px 2px rgba(0,0,0,0.
     text-align: center;
     color: white;
   }
+
+.attribution {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: #777;
+    background-color: #f1f1f1;
+}
+
+.attribution a {
+    color: #555;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
