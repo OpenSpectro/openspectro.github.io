@@ -75,3 +75,5 @@ git clone https://github.com/OpenSpectro/openspectro.github.io.git
 cd openspectro
 pip install -r requirements.txt
 gunicorn main:app
+```
+**Attributes**: Image generated using Dall-E from the prompt
