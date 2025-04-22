@@ -76,4 +76,7 @@ cd openspectro
 pip install -r requirements.txt
 gunicorn main:app
 ```
-**Attributes**: Image generated using Dall-E from the prompt
+## Attributes
+
+- Image generated using Dall-E from the prompt "Spectroscopic Platform"
+- Eid mubarak stickers created by Design Circle - Flaticon
