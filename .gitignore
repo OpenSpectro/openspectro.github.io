@@ -172,7 +172,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-.DS_Store
+*.DS_Store
 tests
 
 chat.md
@@ -181,5 +181,3 @@ biomarker
 old-vis
 __pycache__
 __pycache__/main.cpython-310.pyc
-
-DS_Store
