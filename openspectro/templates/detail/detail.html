@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Detail - OpenSpectro{% endblock %}
+{% block main_content %}
+{% block style %}  <link href="{{ CSSLink }}" rel="stylesheet"> {% endblock %}
+
+<section class="hero-section">
+    <h1>{{ biomarker.BiomarkerName }} Details</h1>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="paper-card">
+      <table class="biomarker-table">
+        <tr>
+          <th>ID</th>
+          <td>{{ biomarker.ID }}</td>
+        </tr>
+        <tr>
+          <th>Chemical Formula</th>
+          <td>{{ biomarker.ChemicalFormula }}</td>
+        </tr>
+        <tr>
+          <th>Concentration</th>
+          <td>{{ biomarker.Concentration }} {{ biomarker.ConcentrationLabel }}</td>
+        </tr>
+        <tr>
+          <th>Tags</th>
+          <td>
+            {% for tag in biomarker.Tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </td>
+        </tr>
+        <tr>
+          <th>Solvent</th>
+          <td>{{ biomarker.Solvent }}</td>
+        </tr>
+        <tr>
+          <th>Source</th>
+          <td>{{ biomarker.Source }}</td>
+        </tr>
+        <tr>
+          <th>Bio Function (Short)</th>
+          <td>{{ biomarker.BioFunctionShort }}</td>
+        </tr>
+        <tr>
+          <th colspan="2">Bio Function (Long)</th>
+        </tr>
+        <tr>
+          <td colspan="2">{{ biomarker.BioFunctionLong }}</td>
+        </tr>
+        <tr>
+          <th>Wiki Link</th>
+          <td>
+            <a href="{{ biomarker.WikiLink }}" target="_blank" class="wiki-link">
+              <i class="fas fa-external-link-alt"></i> {{ biomarker.WikiLink }}
+            </a>
+          </td>
+        </tr>
+        <tr><td colspan="2">
+          <img src={{ moleculeLink }} alt="Molecule Image" class="molecule-image">
+        </td></tr>
+        <tr><td colspan="2">
+          <img src={{ cuvetteLink }} alt="Cuvette Image" class="cuvette-image">
+        </td></tr>
+      </table>
+
+      <!-- Back Button -->
+      <div class="back-button">
+        <a href="{{ url_for('database.page') }}" class="acc-button">
+          <i class="fas fa-arrow-left"></i> Back to Database
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
