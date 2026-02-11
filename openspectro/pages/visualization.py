@@ -273,6 +273,17 @@ def generate_graph(biomarker_id, orientation, viz_type, dimension, intensity_thr
                 A = -np.log10(ratio)
                 A[A < 0] = 0  # Just in case any floating precision issues
 
+                output_data = np.column_stack((spectrometer_wavelengths, A))
+
+                np.savetxt(
+                    f"{sample_name}_absorbance.txt",
+                    output_data,
+                    fmt="%.6f",
+                    delimiter="\t",
+                    header="Wavelength(nm)\tAbsorbance",
+                    comments=""
+                )
+
                 fig = go.Figure()
                 fig.add_trace(go.Scatter(
                     x=spectrometer_wavelengths,
